@@ -1,23 +1,25 @@
-# Embedded classroom browser compatibility
+# Fast embedded classroom lessons — 2026-11-09
 
-The 2026-11-08 viewport patch fixes a startup layout defect in embedded browsers
-that do not recognise dynamic viewport units. The inspected local ClassIn build
-contains Chromium 103; `dvh` is supported from Chromium 108.
+The first viewport fallback addressed a real compatibility defect but did not
+resolve the reported ClassIn startup failure. Release `r20261109a` replaces the
+multi-megabyte inline/module pages with approximately 5 KB HTML shells, a shared
+classic-script runtime targeting Chrome 69 / Safari 12, and separate media.
 
-Each lesson now declares `height:100vh` before `height:100dvh`. Older engines keep
-the supported height instead of collapsing the percentage-sized viewport and
-scaling the lesson to zero. Modern browsers still use the dynamic height.
+Images are resized for the actual lesson canvas. Fonts are subset WOFF2 files.
+Songs use `preload="none"` and are requested only after Play. The user-supplied
+Goodbye video remains byte-identical. Media range requests return HTTP 206.
 
-A small classic-script bootstrap preserves native ResizeObserver when present,
-provides a size-change fallback when absent, and shows an English reload message
-if startup fails. The original teaching scripts, lesson data, image/video/audio
-payloads and existing audio-unlock handler are unchanged.
+The `100vh` / `100dvh` fallback is retained. A late successful mount now removes
+the loading overlay even after a slow connection; the old 30-second timeout no
+longer leaves a successful lesson covered. Saved records are validated without
+clearing valid records, and render errors provide an English recovery screen.
 
-The repository still uses the original lesson URLs. No browser data is cleared.
-Reload the lesson after deployment; a query such as `?compat=20261108` can avoid
-an old cached document without changing the lesson itself.
+The user confirmed that My Body displays its cover and the Let’s begin button
+works in an empty ClassIn test classroom. Browser checks covered all 76 pages
+with no observed broken images. Memory, optional entry/exit, reward audio and
+Goodbye playback were exercised. Ten automated checks passed. This does not
+claim that every interaction was retested in every ClassIn version or network.
 
-Validation: six automated checks cover bootstrap readiness, the timeout state,
-observer changes and disconnection, screen CSS fallback, and unchanged original
-teaching/media script hashes in all three HTML files. ClassIn classroom visual
-retesting was not completed because local Computer Use was stopped by Escape.
+The original lesson URLs remain in place. Reload an old open page, or use
+`my-body.html?fast=r20261109a` to bypass its old cached document. Keep the entire
+runtime/assets/fonts/media folders together when republishing elsewhere.
