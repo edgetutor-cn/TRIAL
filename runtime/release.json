@@ -1,0 +1,131 @@
+{
+  "revision": "r20261109a",
+  "js": "runtime/lesson-51c1e942a274.js",
+  "css": "runtime/lesson-9c2cc5d14631.css",
+  "lessons": [
+    {
+      "id": "cd",
+      "file": "letter-cd.html",
+      "htmlBytes": 5037,
+      "scenes": 24
+    },
+    {
+      "id": "colors",
+      "file": "color-rb.html",
+      "htmlBytes": 5046,
+      "scenes": 26
+    },
+    {
+      "id": "body",
+      "file": "my-body.html",
+      "htmlBytes": 5039,
+      "scenes": 26
+    }
+  ],
+  "objects": {
+    "body": {
+      "id": "body",
+      "label": "body",
+      "article": "a body",
+      "src": "body.png",
+      "voice": "body"
+    },
+    "head": {
+      "id": "head",
+      "label": "head",
+      "article": "a head",
+      "src": "head.png",
+      "voice": "head"
+    },
+    "hair": {
+      "id": "hair",
+      "label": "hair",
+      "src": "hair.png",
+      "voice": "hair"
+    },
+    "longHair": {
+      "id": "longHair",
+      "label": "long hair",
+      "src": "long-hair.png",
+      "voice": "long hair"
+    },
+    "shortHair": {
+      "id": "shortHair",
+      "label": "short hair",
+      "src": "short-hair.png",
+      "voice": "short hair"
+    },
+    "cat": {
+      "id": "cat",
+      "label": "cat",
+      "article": "a cat",
+      "src": "cat.webp",
+      "letter": "C",
+      "voice": "cat"
+    },
+    "car": {
+      "id": "car",
+      "label": "car",
+      "article": "a car",
+      "src": "car.png",
+      "letter": "C",
+      "voice": "car"
+    },
+    "dog": {
+      "id": "dog",
+      "label": "dog",
+      "article": "a dog",
+      "src": "dog.webp",
+      "letter": "D",
+      "voice": "dog"
+    },
+    "duck": {
+      "id": "duck",
+      "label": "duck",
+      "article": "a duck",
+      "src": "duck.png",
+      "letter": "D",
+      "voice": "duck"
+    },
+    "happy": {
+      "id": "happy",
+      "label": "happy",
+      "src": "happy.webp",
+      "voice": "happy"
+    },
+    "sad": {
+      "id": "sad",
+      "label": "sad",
+      "src": "sad.webp",
+      "voice": "sad"
+    },
+    "red": {
+      "id": "red",
+      "label": "red",
+      "src": "red-balloon.png",
+      "voice": "red",
+      "color": "red"
+    },
+    "blue": {
+      "id": "blue",
+      "label": "blue",
+      "src": "blue-balloon.png",
+      "voice": "blue",
+      "color": "blue"
+    },
+    "redCar": {
+      "id": "redCar",
+      "label": "red car",
+      "src": "red-car.png",
+      "voice": "red car",
+      "color": "red"
+    },
+    "blueCar": {
+      "id": "blueCar",
+      "label": "blue car",
+      "src": "blue-car.png",
+      "voice": "blue car",
+      "color": "blue"
+    }
+  }
+}
